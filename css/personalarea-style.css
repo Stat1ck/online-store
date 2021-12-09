@@ -1,0 +1,191 @@
+.block__personalarea{
+    margin-top: 110px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.block__personalarea_inside{
+    padding: 40px;
+    width: calc(80% - 80px);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+.personalarea_avatar_img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.block_personalarea_avatar{
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+    width: 40%;
+}
+.p_data input[type="button"],
+.link_user_orders{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 15px 0;
+    width: 150px;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    border: 0;
+    color: #fff;
+    text-align: center;
+}
+.link_user_orders:hover{
+    background: linear-gradient(#FFC02F, #F59E2D) #F6A842;
+}
+.p_data input[type="button"]{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.personalarea_select_avatar{
+    opacity: 0;
+    pointer-events: none;
+}
+.block_personalarea_main_data{
+    padding: 0 10%;
+    width: calc(100% - 20%);
+    justify-content: center;
+}
+.block_personalarea_main_data h3{
+    text-align: left;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+.block_personalarea_main_data,
+.personalarea_main_data,
+.personalarea_main_data .p_data{
+    display: flex;
+}
+.block_personalarea_main_data,
+.personalarea_main_data{
+    flex-direction: column;
+}
+.personalarea_main_data .p_data{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.personalarea_main_data .p_data label{
+    min-width: 200px;
+    font-size: 20px;
+}
+.personalarea_main_data_inputs_addr,
+.personalarea_main_data_inputs{
+    width: calc(100% - 300px);
+    padding: 5px 15px;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.block_p_eye{
+    width: calc(100% - 270px);
+}
+.personalarea_main_data_inputs_pass{
+    height: calc(100% - 10px);
+    width: calc(100% - 30px);
+    padding: 5px 15px;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.p_data{
+    padding: 7px 0;
+}
+.p_data label{
+    padding: 7px 0;
+}
+.personalarea_main_data_inputs.readonly_input{
+    color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.block_wrapper_avatar{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+.block_personalarea_btn_select_avatar{
+    transition: all ease .5s;
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    bottom: -75px;
+}
+.block_personalarea_btn_select_avatar.showBtn{
+    bottom: 0px;
+}
+.p_data.p_data_for_btn{
+    justify-content: flex-end;
+}
+.block_p_eye{
+    position: relative;
+}
+.block_p_eye .fas.fa-eye{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+@media (max-width: 767px){
+    .block__personalarea_inside{
+        flex-direction: column;
+    }
+    .block_personalarea_main_data{
+        padding: 0;
+    }
+    .personalarea_main_data_inputs_pass{
+        width: calc(100% - 30px);
+        height: 27px;
+    }
+    .personalarea_main_data_inputs_addr,
+    .personalarea_main_data_inputs{
+        width: calc(100% - 30px);
+        max-width: 500px;
+        height: 27px;
+    }
+    .block_personalarea_main_data {
+        width: 100%;
+    }
+    .block_p_eye {
+        width: calc(100% - 30px);
+        max-width: 500px;
+        height: 27px;
+    }
+    .personalarea_main_data .p_data{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1023px){
+    .block__personalarea_inside{
+        padding: 15px;
+        width: calc(100% - 60px);
+        margin: 0 15px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px){
+    
+}

@@ -1,0 +1,120 @@
+.container_slider{
+    position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #F6F6F6;
+	box-shadow: 0 0 5px 5px inset rgba(0,0,0,0.25);
+	padding: 30px 0;
+	margin: 90px 0;
+}
+.block_for_slider_post{
+	max-width: 50%;
+    overflow: hidden;
+}
+.blog_tekcta{
+    text-align:center;
+    margin-bottom: 20px;
+}
+.insta_akk{
+    font-size:32px;
+}
+.fruit{
+    font-size:20px;
+}
+.btn_inst{
+  margin: 10px 3px 30px 5px;
+  color: #fff; 
+  text-decoration: none;
+  user-select: none; 
+  background:#1E90FF; 
+  padding: .7em 1.5em; 
+  outline: none; 
+  border-radius:10px;
+  transition: all ease 0.5s;
+} 
+.btn_inst:hover { background: rgb(232,95,76); } 
+.btn_inst:active { background: rgb(0, 0, 139); } 
+
+.block_slider_posts{
+    max-height: 950px;
+	display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    left: 0;
+    transition: all ease 1s;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(111,111,111,1) 50%, rgba(255,255,255,1) 100%);
+}
+.instagram-media{
+	background:#FFF; 
+	border-radius:3px; 
+	box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+	max-width: 540px;
+	max-height: 950px;
+}
+.arrow_slider{
+    width: 100px;
+}
+.block_for_slider_post-prev,
+.block_for_slider_post-next{
+    z-index: 100;
+    position: absolute;
+    cursor: pointer;
+}
+.block_for_slider_post-prev{
+    left: calc(20% - 100px);
+}
+.block_for_slider_post-next{
+    left: 80%;
+}
+@media (max-width: 767px){
+    .container_slider{
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
+    .block_for_slider_post{
+        max-width: 100%;
+    }
+    .block_for_slider_post{
+	    max-width: 90%;
+    }
+    .block_for_slider_post-prev{
+        left: calc(15% - 50px);
+    }
+    .block_for_slider_post-next{
+        left: 85%;
+    }
+    .arrow_slider{
+        width: 50px;
+    }
+}
+
+@media (max-width: 350px){
+    .block_for_slider_post-prev{
+        left: calc(15% - 40px);
+    }
+    .block_for_slider_post-next{
+        left: 85%;
+    }
+    .arrow_slider{
+        width: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .insta_akk{
+        font-size:25px;
+    }   
+    .fruit{
+        font-size:17px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px){
+    
+}

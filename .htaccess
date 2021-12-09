@@ -1,0 +1,23 @@
+AddDefaultCharset utf-8
+php_flag display_errors off
+php_value error_reporting 0
+ErrorDocument 404 /errors/404.php
+
+    Options +FollowSymLinks
+    Options All -Indexes
+    DirectoryIndex index.php
+
+    RewriteEngine On
+    RewriteBase /   
+
+ RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)/$ /?controller=$1&action=$2&id=$3&%{QUERY_STRING} [L,QSA]
+ RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/$ /?controller=$1&action=$2&category=$3&%{QUERY_STRING} [L,QSA]
+ RewriteRule ^([a-z]+)/([a-z]+)/$ /?controller=$1&action=$2&%{QUERY_STRING} [L,QSA]
+ RewriteRule ^([a-z]+)/([0-9]+)/$ /?controller=$1&id=$2&%{QUERY_STRING} [L,QSA]
+ RewriteRule ^([a-z]+)/$ /?controller=$1&%{QUERY_STRING} [L,QSA]
+
+	RewriteCond $1 !^(index\.php)
+    RewriteCond %{REQUEST_URI} !\.(css│js│jpg│gif)$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L,QSA]
